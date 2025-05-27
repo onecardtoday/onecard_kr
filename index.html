@@ -15,10 +15,21 @@
   </style>
 </head>
 <body>
-  <h1>오늘의 타로카드를 뽑는 중입니다...</h1>
+  <h1>🔮 오늘의 타로카드를 뽑는 중입니다...</h1>
+
   <script>
     const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-    window.location.href = "https://www.youtube.com/shorts/" + randomVideo;
+
+    const appUrl = "youtube://www.youtube.com/watch?v=" + randomVideo;
+    const webUrl = "https://www.youtube.com/shorts/" + randomVideo;
+
+    // 앱으로 먼저 시도
+    window.location.href = appUrl;
+
+    // 실패 시 웹으로 fallback
+    setTimeout(() => {
+      window.location.href = webUrl;
+    }, 2000);
   </script>
 </body>
 </html>
