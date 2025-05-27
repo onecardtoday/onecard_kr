@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>오늘의 행운 원카드</title>
+  <title>오늘의 타로카드</title>
   <script src="videos.js"></script>
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
       margin-top: 30vh;
+      background-color: #f8f8f8;
     }
   </style>
 </head>
 <body>
-  <h1>오늘의 행운 원카드를 뽑는 중입니다...</h1>
+  <h1>오늘의 타로카드를 뽑는 중입니다...</h1>
   <script>
     const randomVideo = videos[Math.floor(Math.random() * videos.length)];
     window.location.href = "https://www.youtube.com/shorts/" + randomVideo;
